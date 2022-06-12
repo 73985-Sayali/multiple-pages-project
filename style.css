@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*navbar start*/
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: tomato;
+}
+.nav-links a{
+    color: black;
+}
+.nav-links a:hover{
+    color: white;
+}
+.logo{
+    font-size: 25px;
+}
+.menu{
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li a:hover{
+    color:white;
+}
+.menu li{
+    padding: 5px 15px;
+}
+input[type=checkbox]{
+    display: none;
+}
+.navbar_icon{
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/*navbar end*/
+
+
+@media(max-width:768px){
+    .menu{
+        display: none;
+        position: absolute;
+        background-color: tomato;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .menu li:hover{
+        display: inline-block;
+        background-color: tomato;
+        transition: 0.3s ease;
+    }
+    .menu li+li{
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .navbar_icon{
+        display: block;
+    }
+}
+.card{
+    margin-bottom: 50px;
+    width:25%;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border: 2px solid black;
+    transition: 0.3s;
+    margin: 50px;
+}
+
+    img{
+        
+        width: 100%;
+        height: auto;
+    }
+    
+      .flex-row{
+        background-color: white;
+          display: flex;
+          justify-content: space-around;
+          flex-flow: wrap;
+          flex-direction: row;
+      }
+      .card{
+          font-size: 25px;
+      }
+      .flex-container{
+          display: flex;
+          flex-direction: row;
+          font-size: 25px;
+      }
+      .flex-item-left{
+          background-color: rgb(211, 200, 221);
+          flex:50%;
+          padding:10px;
+      }
+      .flex-item-right{
+          background-color:hotpink;
+          flex: 50%;
+          padding: 10px;
+      }
+      /*colorful flowers*/
+      .container{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-top: 80px;
+      }
+      .right-container{
+          width:100%;
+          height: auto;
+          flex: 50%;
+      }
+      .left-container{
+           flex: 50%;
+      }
+      @media screen and (max-width:800px)
+      {
+          .container{
+              flex-direction: column;
+          }
+          .card{
+              flex-direction: column;
+              width: 100%;
+          }
+          img{
+              border-radius: 55px;
+          }
+          .photo{
+              flex-direction: column;
+              
+          }
+          .column-img{
+              margin: 35px;
+          }
+          .a{
+            /* width: 30%; */
+            border-radius: 50%;
+            height: 400px;
+        }
+      }
+      /* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+   
+}
+/*Parallex effect*/
+.parallax{
+    background-image: url('../img/parallex.jpg');
+    height: 600px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*Services*/
+.Services{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(199, 207, 207);
+}
+.services-text{
+    text-align: center;
+    margin-top: 10px;
+}
+.photo{
+    flex-direction: column;
+    display: flex;
+    
+}
+
+ .a{
+    width: 30%;
+    border-radius: 50%;
+    height: 400px;
+}
+.l-img {
+    width: 100%;
+    border: 1px;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    margin-top: 20px;
+    border-radius: 50%;
+   
+}
+/*welcome page*/
+.container1 {
+    position: relative;
+    width: 100%;
+   
+  }
+  
+  .container1 img {
+    width: 100%;
+    height: 650px;
+  }
+  
+  .container1 .btn {
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: rgb(246, 240, 240);
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align:center;
+    
+  }
+  
+  .container1 .btn:hover {
+    background-color: rgb(5, 5, 5);
+    
+  }
+
+/*new gallery*/
+  .row {
+   
+    margin-left: 430px;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .column {
+    margin: 10px;
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
